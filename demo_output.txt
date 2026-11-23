@@ -1,0 +1,53 @@
+[XSS] html-custom-element
+  input:   <safe-canary>9c622310</safe-canary>
+  encoding: none
+  purpose: Inert custom element for checking HTML output encoding; no script or event handler.
+  scope:   authorized lab only
+
+[XSS] html-special-characters
+  input:   '9c622310"&<>
+  encoding: none
+  purpose: Special-character canary for checking context-aware output encoding.
+  scope:   authorized lab only
+
+[SQLI] single-quote-boundary
+  input:   9c622310'
+  encoding: none
+  purpose: Single-quote boundary probe; no SQL operator, comment, union, or timing logic.
+  scope:   authorized lab only
+
+[SQLI] double-quote-boundary
+  input:   9c622310"
+  encoding: none
+  purpose: Double-quote boundary probe; no SQL operator, comment, union, or timing logic.
+  scope:   authorized lab only
+
+[SQLI] closing-parenthesis-boundary
+  input:   9c622310)
+  encoding: none
+  purpose: Closing-parenthesis boundary probe only; no query logic.
+  scope:   authorized lab only
+
+[SQLI] backslash-boundary
+  input:   9c622310\
+  encoding: none
+  purpose: Backslash boundary probe only; no query logic.
+  scope:   authorized lab only
+
+[COMMAND] semicolon-boundary
+  input:   9c622310;
+  encoding: none
+  purpose: Trailing shell metacharacter probe only; no command follows it.
+  scope:   authorized lab only
+
+[COMMAND] and-boundary
+  input:   9c622310&&
+  encoding: none
+  purpose: Trailing shell metacharacter probe only; no command follows it.
+  scope:   authorized lab only
+
+[COMMAND] pipe-boundary
+  input:   9c622310|
+  encoding: none
+  purpose: Trailing shell metacharacter probe only; no command follows it.
+  scope:   authorized lab only

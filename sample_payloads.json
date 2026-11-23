@@ -1,0 +1,83 @@
+[
+  {
+    "category": "xss",
+    "id": "html-custom-element",
+    "token": "47becaa9",
+    "input": "<safe-canary>47becaa9</safe-canary>",
+    "encoding": "none",
+    "purpose": "Inert custom element for checking HTML output encoding; no script or event handler.",
+    "requires_authorized_lab": true
+  },
+  {
+    "category": "xss",
+    "id": "html-special-characters",
+    "token": "47becaa9",
+    "input": "'47becaa9\"&<>",
+    "encoding": "none",
+    "purpose": "Special-character canary for checking context-aware output encoding.",
+    "requires_authorized_lab": true
+  },
+  {
+    "category": "sqli",
+    "id": "single-quote-boundary",
+    "token": "47becaa9",
+    "input": "47becaa9'",
+    "encoding": "none",
+    "purpose": "Single-quote boundary probe; no SQL operator, comment, union, or timing logic.",
+    "requires_authorized_lab": true
+  },
+  {
+    "category": "sqli",
+    "id": "double-quote-boundary",
+    "token": "47becaa9",
+    "input": "47becaa9\"",
+    "encoding": "none",
+    "purpose": "Double-quote boundary probe; no SQL operator, comment, union, or timing logic.",
+    "requires_authorized_lab": true
+  },
+  {
+    "category": "sqli",
+    "id": "closing-parenthesis-boundary",
+    "token": "47becaa9",
+    "input": "47becaa9)",
+    "encoding": "none",
+    "purpose": "Closing-parenthesis boundary probe only; no query logic.",
+    "requires_authorized_lab": true
+  },
+  {
+    "category": "sqli",
+    "id": "backslash-boundary",
+    "token": "47becaa9",
+    "input": "47becaa9\\",
+    "encoding": "none",
+    "purpose": "Backslash boundary probe only; no query logic.",
+    "requires_authorized_lab": true
+  },
+  {
+    "category": "command",
+    "id": "semicolon-boundary",
+    "token": "47becaa9",
+    "input": "47becaa9;",
+    "encoding": "none",
+    "purpose": "Trailing shell metacharacter probe only; no command follows it.",
+    "requires_authorized_lab": true
+  },
+  {
+    "category": "command",
+    "id": "and-boundary",
+    "token": "47becaa9",
+    "input": "47becaa9&&",
+    "encoding": "none",
+    "purpose": "Trailing shell metacharacter probe only; no command follows it.",
+    "requires_authorized_lab": true
+  },
+  {
+    "category": "command",
+    "id": "pipe-boundary",
+    "token": "47becaa9",
+    "input": "47becaa9|",
+    "encoding": "none",
+    "purpose": "Trailing shell metacharacter probe only; no command follows it.",
+    "requires_authorized_lab": true
+  }
+]
